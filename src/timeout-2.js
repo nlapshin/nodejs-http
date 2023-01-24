@@ -1,4 +1,4 @@
-setTimeout(() => console.log('timeout'));
+setTimeout(() => console.log('timeout')); // Когда мы увидем в консоле timeout?
 
 function myAsync(start = 0) {
   console.log(start)

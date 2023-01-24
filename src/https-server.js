@@ -17,3 +17,9 @@ async function run() {
 
   console.log('started 8080')
 }
+
+// SSR решения - next.js
+// webpack + React. webpack собирает react и создает dev-server(NodeJS).
+// Dev server отдает статику, в частости наш React приложения
+
+// nodemon webpack для nodejs. Следить за изменениями файлов и авто релоад.

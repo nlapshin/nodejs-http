@@ -1,6 +1,9 @@
 const http = require('http');
 const router = require('find-my-way')()
 
+// find-my-way - используется в fastify в роутера
+// от O(n) -> O(logN)
+
 router.on('GET', '/', (req, res, params) => {
   res.end('{"message":"hello world"}')
 })
