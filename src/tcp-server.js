@@ -11,13 +11,13 @@ server.listen(port, function() {
 server.on('connection', function(socket) {
   socket.setEncoding('utf8');
 
-  socket.on('data', function(chunk) {
-    console.log(`Data received from client: ${chunk.toString()}`);
-
-    socket.write('HTTP/1.1 200 OK\r\n')
-    process.setTimeout(() => {
-      socket.destroy()
-    }, 1000)
+  socket.on('data', (data) => {
+    console.log(data.toString());
+    socket.write('HTTP/1.1 200 OK\r\n');
+    socket.write('Content-Type: text/plain\r\n');
+    socket.write('\r\n');
+    socket.write('Hello, World!');
+    socket.end();
   });
 
   socket.on('end', function() {

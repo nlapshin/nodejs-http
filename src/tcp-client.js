@@ -2,16 +2,18 @@ const net = require('net');
 
 const client = new net.Socket();
 
-client.connect(8000, '127.0.0.1', function() {
-	console.log('Connected');
-	client.write('Hello, server! Love, Client.');
+client.connect(8000, '127.0.0.1', () => {
+  console.log('Connected');
+  client.write('GET / HTTP/1.1\r\n');
+  client.write('Host: localhost\r\n');
+  client.write('Connection: keep-alive\r\n');
+  client.write('\r\n');
 });
 
-client.on('data', function(data) {
-	console.log('Received: ' + data);
-	client.destroy(); // kill client after server's response
+client.on('data', (data) => {
+  console.log('Received: ' + data);
 });
 
-client.on('close', function() {
-	console.log('Connection closed');
+client.on('end', () => {
+  console.log('Server disconnected');
 });
