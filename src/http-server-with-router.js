@@ -13,8 +13,6 @@ router.on('GET', '/prefix/:id', (req, res, params) => {
   res.end(`{"message":hello ${params.id}"}`)
 })
 
-
-
 const server = http.createServer((req, res) => {
   router.lookup(req, res)
 })

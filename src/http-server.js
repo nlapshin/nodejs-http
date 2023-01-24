@@ -7,3 +7,6 @@ const requestListener = function (req, res) {
 
 const server = http.createServer(requestListener);
 server.listen(8080);
+
+
+// net(tcp)-пакет -> http-пакет -> express(koa, fastify и т.д.)

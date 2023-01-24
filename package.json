@@ -21,6 +21,7 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "cron": "^2.0.0",
     "find-my-way": "^7.0.0",
     "http-raw-request": "^2.0.2"
   }
