@@ -1,3 +1,9 @@
+// net - TCP
+// tls - SSL/TSL
+// http - http
+// https - https
+
+
 const net = require('net');
 
 const client = new net.Socket();

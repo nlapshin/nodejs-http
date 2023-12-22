@@ -3,7 +3,7 @@
 // const timeout = setTimeout(function fun() {
 //   console.log(`timeout: ${++counter}`);
 
-//   timeout.refresh()
+//   timeout.refresh();
 // }, 2000);
 
 

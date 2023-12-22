@@ -12,7 +12,7 @@ function testAsync() {
   const res = new Promise((res) => {
     console.log('4') //
 
-    res('5')
+    res('5') // Микро задача
   })
 
   count();
@@ -21,6 +21,30 @@ function testAsync() {
 
 console.clear()
 testAsync()
+
+
+// Что выведется в консоль(последовательно).
+
+// 1 - 4 - 3 - Promise{ '5' } - 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 1 - 4 - 3 - Promise(5) - 2
 
