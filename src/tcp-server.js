@@ -15,7 +15,7 @@ server.on('connection', function(socket) {
 
   // Поток данных, мы его обрабатывать и отправлять данные обратно
   socket.on('data', (data) => {
-    console.log(data.toString());
+    console.log('data', data);
     socket.write('HTTP/1.1 200 OK\r\n');
     socket.write('Content-Type: text/plain\r\n');
     socket.write('\r\n');
